@@ -1,0 +1,20 @@
+
+look into these:
+
+  promises
+    - async actions in javascript
+    - object returned after async action
+    - resolved (can call a function) or rejected (different function)
+    - flatter than callback model
+
+  es6 modules
+    - es6_module_transpiler-rails (~> 0.3.0)
+      - cross compiles es6 files into an 'amd' js namespace (?)
+    - add to javascript: class definitions, promises, modules
+    - avoid namespace collisions
+
+
+Add to gemfile:
+gem 'ember-appkit-rails'
+
+
