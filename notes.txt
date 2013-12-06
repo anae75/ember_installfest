@@ -26,3 +26,94 @@ but jquery-ujs is unnecessary (but prob no conflicts)
 turbolinks is incompatible with ember
 
 views not used -- rely on ember for output
+
+{{outlet}}  -- equivalent of yield
+
+
+model.save() returns a promise (app/routes/contacts/new.js.es6)
+
+
+deactivate function gets called when you exit the route so in
+(app/routes/contacts/new.js.es6) when you transition to another route (either on save or
+cancel) the deactivate action gets called.
+
+
+if the rails app returns something that's not a 200 series response it's considered to be
+a failure
+
+destroyRecord returns a promise
+deleteRecord does not return a promise
+
+
+NOTE that model gets reloaded whenever we enter that route.  So in the example if you
+click on index (and then some other user somewhere else creates a new contact) and then
+you click on index again you WILL NOT see the new contact.  But if you go to 'new' and
+then back to index you WILL see the new contact because you have entered the index route
+again.
+
+emberjs.com/guides
+
+google chrome extension ember inspector  <-- get this!!
+
+
+
+
+  503  cd test_projects/ember_installfest/
+  504  ls
+  505  git status
+  506  git diff
+  507  git commit -m 'gemfile.lock' Gemfile.lock 
+  508  git status
+  509  ruby -v
+  510  rvm use 2.0
+  511  ruby -v
+  512  git status
+  513  git status
+  514  gem --version
+  515  git status
+  516  git add notes.txt 
+  517  git commit -m 'added notes' notes.txt 
+  518  ls config/initializers/csrf.js 
+  519  ls app/assets/
+  520  ls app/components/
+  521  ls app/templates/components/
+  522  mkdir app/controllers/api
+  523  mkdir app/controllers/api/v1
+  524  rails generate model contact name:string phone:string
+  525  rails generate serializer contact name:string phone:string
+  526  cat app/serializers/contact_serializer.rb 
+  527  rake db:migrate
+  528  rake routes
+  529  git status
+  530  git add app/ db/migrate/ test/
+  531  git status
+  532  git commit -m 'created simple contact crud' -a
+  533  rake tasks
+  534  rake --tasks
+  535  rake db:seed
+  536  git status
+  537  git commit -m 'added db seeds' -a
+  538  git status
+  539  ls app/templates/components/
+  540  mv app/templates/application.hbs app/templates/components/
+  541  cat app/templates/components/application.hbs 
+  542  mv app/templates/components/application.hbs app/templates/
+  543  ls
+  544  git status
+  545  git add app/templates/
+  546  git status
+  547  git commit -m 'added application.hbs to replace the default home screen' -a
+  548  git status
+  549  rails generate ember:scaffold contact name:string phone:string
+  550  git status
+  551  git add app/models/ app/routes/ app/templates/contacts.hbs app/templates/contacts
+  552  git status
+  553  git commit -m 'after running rails generate ember:scaffold contact name:string phone:string should now be able to go to http://localhost:3000/#/contacts and do CRUD ops' -a
+  554  git status
+  555  git status
+  556  git diff
+  557  git commit -m 'fixed up the destroy redirect; also added link to contacts index' -a
+  558  git status
+  559  rake routes
+  560  git status
+  561  history
