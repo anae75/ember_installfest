@@ -19,7 +19,7 @@ class Api::V1::ContactsController < ApplicationController
   def destroy
     contact = Contact.find(params[:id])
     contact.destroy
-    render head: :no_content
+    render json: contact, status: 204
   end
 
   def show
