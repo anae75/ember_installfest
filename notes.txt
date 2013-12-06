@@ -13,8 +13,16 @@ look into these:
     - add to javascript: class definitions, promises, modules
     - avoid namespace collisions
 
+> brew install node
 
 Add to gemfile:
 gem 'ember-appkit-rails'
 
+> rvm use 2.0
 
+
+jquery is a requirement for ember
+but jquery-ujs is unnecessary (but prob no conflicts)
+turbolinks is incompatible with ember
+
+views not used -- rely on ember for output
