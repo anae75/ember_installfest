@@ -1,0 +1,18 @@
+<h3>Index</h3>
+
+<p>{{#link-to 'contacts.new'}}New contact{{/link-to}}</p>
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>Name</th>
+    <th>Phone</th>
+  </tr>
+  {{#each}}
+    <tr>
+      <td>{{#link-to 'contacts.show' this}}{{id}}{{/link-to}}</td>
+      <td>{{name}}</td>
+      <td>{{phone}}</td>
+    </tr>
+  {{/each}}
+</table>
